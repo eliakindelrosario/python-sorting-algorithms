@@ -53,6 +53,9 @@ class Quicksort():
 			return
 		# select a randome pivot value
 		pivot = x[randint(left,right)]
+		# select the middle value of a list
+		# pivot = x[ceil((left+right)/2)]
+		
 		# get the index where the list is split
 		index = self.partition(x, left, right, pivot)
 		# sort the left side of the list
@@ -67,20 +70,20 @@ class Quicksort():
 			# as long as the value in the left side of the list is less than the pivot value, 
 			# move up the list 
 			while x[left]<pivot:
-				print("Left Side")
-				print(x)
-				print("left: {} < pivot: {}".format(x[left], pivot))
-				print("\n")
+				# print("Left Side")
+				# print(x)
+				# print("left: {} < pivot: {}".format(x[left], pivot))
+				# print("\n")
 				left += 1
 
 			# Right side
 			# as long as the value in the right side of the list greater than the pivot value, 
 			# move down the list 
 			while x[right]>pivot:
-				print("Right Side")
-				print(x)
-				print("right: {} > pivot: {}".format(x[right], pivot))
-				print("\n")
+				#print("Right Side")
+				# print(x)
+				# print("right: {} > pivot: {}".format(x[right], pivot))
+				# print("\n")
 				right -= 1
 
 			# make sure that left and right pointers do not overlap
@@ -95,55 +98,32 @@ class Quicksort():
 		return left
 
 	def swap(self, x, left, right):
-		print("swapping left:{} with right:{}".format(x[left], x[right]))
+		#print("swapping left:{} with right:{}".format(x[left], x[right]))
 		temp = x[left] # store left value
 		x[left] = x[right] # swicth left value with right value
 		x[right] = temp # switchc right value with left value 
 
-def quicksort_alternative(x):
-	# if the list has less then two elements,
-	# then it is sorted
-	if len(x) < 2:
-		return x
+# def quicksort_alternative(x):
+# 	# if the list has less then two elements,
+# 	# then it is sorted
+# 	if len(x) < 2:
+# 		return x
 
-	# select a random list element 
-	pivot = choice(x)
-	#print("pivot: {}".format(pivot))
+# 	# select a random list element 
+# 	pivot = choice(x)
+# 	#print("pivot: {}".format(pivot))
 
-	# splite the list into smaller list 
-	# left_list contains all values smaller than the pivot
-	left_list = [element for element in x if element < pivot]
+# 	# splite the list into smaller list 
+# 	# left_list contains all values smaller than the pivot
+# 	left_list = [element for element in x if element < pivot]
 
-	# middle list contain all values equal to the pivot 
-	middle_list = [element for element in x if element == pivot]
+# 	# middle list contain all values equal to the pivot 
+# 	middle_list = [element for element in x if element == pivot]
 
-	# right_list contains all values that are bigger than the pivot
-	right_list = [element for element in x if element > pivot]
+# 	# right_list contains all values that are bigger than the pivot
+# 	right_list = [element for element in x if element > pivot]
 
-	# concatinate the list
-	# return the list sorted after recursively sorting the left_list and the right_list
-	return quicksort(left_list) + middle_list + quicksort(right_list)
-
-
-def setup():
-	x = [] # empty list
-	# add 100 random elements to the 
-	# empty list
-	for i in range(0, 100):
-	    x.append(randint(0, 100))
-	# return full list
-	return x
-
-def main():
-	x = setup() # list with 100 elements
-	start = time() # program start time
-	print("Before: {}".format(x))
-	print(Quicksort.quicksort(Quicksort(), x))
-	print("After: {}".format(x))
-	print("{} seconds".format(time() - start)) # program end time
-
-if __name__ == "__main__":
-	exit(main())
-
-
+# 	# concatinate the list
+# 	# return the list sorted after recursively sorting the left_list and the right_list
+# 	return quicksort(left_list) + middle_list + quicksort(right_list)
 
