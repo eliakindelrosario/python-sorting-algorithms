@@ -63,3 +63,6 @@ def quicksort(L, low_index, high_index):
     p = partition(L, low_index, high_index)
     quicksort(L, low_index, p-1)
     quicksort(L, p, high_index)
+
+def quicksort_(L):
+    quicksort(L, 0, len(L)-1)

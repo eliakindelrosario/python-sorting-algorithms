@@ -2,7 +2,7 @@
 With help of get_list_of_numbers(input), gets list of numbers numbers from users and verifies input is valid.
 '''
 def getInput():
-     return(get_list_of_numbers(input("Enter a space separated list of numbers\nto be sorted.")))
+     return(get_list_of_numbers(input("Enter a space separated list of numbers\nto be sorted.\n")))
 
 def get_list_of_numbers(_input):
     numbers = _input.split()
