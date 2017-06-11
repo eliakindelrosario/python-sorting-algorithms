@@ -1,11 +1,9 @@
 from quicksort import *
+from util import *
 
-ll = [1,9,2,56,1,234,13,8,7]
-l = [2,1,6,5,234,2,3,4,5]
-print(len(ll))
-quicksort(l,0,8)
-print(len(l))
-quicksort(l,0,8)
-quicksort(ll,0,8)
-print(l)
-print(ll)
+num = getInput()
+print("Your orignal list was:\n",num)
+quicksort(num, 0, len(num)-1)
+print("Your sorted list is:\n",num)
+
+
