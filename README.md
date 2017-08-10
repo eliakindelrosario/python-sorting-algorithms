@@ -3,8 +3,11 @@ This repo contains source code intended to practice and study algorithm developm
 
 # Installation 
 Most of these programs can be run by the following command:
+
 ```$ python main.py```
-or 
+
+or
+
 ```$ python “name of the algorithm”```
 
 If there are some third-party modules, we will make sure to update the installation’s instruction guide. 
